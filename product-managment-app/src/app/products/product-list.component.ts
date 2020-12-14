@@ -1,15 +1,18 @@
 import { Component } from "@angular/core";
 
+import { IProduct } from "../shared/interfaces";
+
 @Component({
   selector: "app-product-list",
-  templateUrl: "./product-list.component.html"
+  templateUrl: "./product-list.component.html",
+  styleUrls: ["./product-list.component.scss"]
 })
 export class ProductListComponent {
   pageTitle = "Product List";
   imageWidth = 50;
   imageMargin = 2;
   showImages = false;
-  products: any[] = [
+  products: IProduct[] = [
     {
       "productId": 1,
       "productName": "Leaf Rake",
